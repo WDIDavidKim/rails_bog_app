@@ -1,6 +1,12 @@
+<nav class="navbar navbar-inverse">
+  <a class="navbar-brand" href="/">Creatures</a>
+  <a class="navbar-brand" href="/creatures/new">New Creature</a>
+</nav>
+
 <% @creatures.each do |creature| %>
   <p>
     <strong>Name:</strong> <%= creature.name %><br>
-    <strong>Description:</strong> <%= creature.description %>
+    <strong>Description:</strong> <%= creature.description %><br>
+    <%= link_to 'Show', creature_path(creature) %>
   </p>
 <% end %>
