@@ -1,7 +1,13 @@
+<ol class="breadcrumb">
+  <li><a href="/creatures">Home</a></li>
+  <li><a href="/creatures/new">Create New</a></li>
+</ol>
+
 <br>
 <% @creatures.each do |creature| %>
   <p>
     <strong> Name: </strong><%= creature.name %><br>
-    <strong> Description: </strong><%= creature.description %>
+    <strong> Description: </strong><%= creature.description %><br>
+    <%= link_to 'Show', creature_path(creature) %>
   </p>
 <% end %>
